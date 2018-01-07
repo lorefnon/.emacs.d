@@ -10,6 +10,31 @@
 
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
+(defun lf-revert-buffer-no-confirm ()
+  "Revert buffer without confirmation."
+  (interactive) (revert-buffer t t))
+
+(defun lf-move-file (new-location)
+  "Write this file to NEW-LOCATION, and delete the old one."
+  (interactive (list (expand-file-name
+		      (if buffer-file-name
+			  (read-file-name "Move file to: ")
+			(read-file-name "Move file to: "
+					default-directory
+					(expand-file-name (file-name-nondirectory (buffer-name))
+							  default-directory))))))
+  (when (file-exists-p new-location)
+    (delete-file new-location))
+  (let ((old-location (expand-file-name (buffer-file-name))))
+    (message "old file is %s and new file is %s"
+	     old-location
+	     new-location)
+    (write-file new-location t)
+    (when (and old-location
+	       (file-exists-p new-location)
+	       (not (string-equal old-location new-location)))
+      (delete-file old-location))))
+
 ;; Credits: Xah Lee
 
 (defun xah-copy-file-path (&optional φdir-path-only-p)
@@ -85,32 +110,6 @@ Version 2015-08-12"
 	(indent-rigidly beg end (or
 				 (and (< indent-amount 0) indent-amount)
 				 (* (or count 1) (- 0 tab-width))))))))
-
-
-(defun lf-revert-buffer-no-confirm ()
-  "Revert buffer without confirmation."
-  (interactive) (revert-buffer t t))
-
-(defun lf-move-file (new-location)
-  "Write this file to NEW-LOCATION, and delete the old one."
-  (interactive (list (expand-file-name
-		      (if buffer-file-name
-			  (read-file-name "Move file to: ")
-			(read-file-name "Move file to: "
-					default-directory
-					(expand-file-name (file-name-nondirectory (buffer-name))
-							  default-directory))))))
-  (when (file-exists-p new-location)
-    (delete-file new-location))
-  (let ((old-location (expand-file-name (buffer-file-name))))
-    (message "old file is %s and new file is %s"
-	     old-location
-	     new-location)
-    (write-file new-location t)
-    (when (and old-location
-	       (file-exists-p new-location)
-	       (not (string-equal old-location new-location)))
-      (delete-file old-location))))
 
 (global-set-key (kbd "C-c b n") 'generate-buffer)
 (global-set-key (kbd "C-c [") 'lf-unindent-dwim)
