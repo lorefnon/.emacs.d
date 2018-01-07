@@ -12,6 +12,7 @@
   (require 'neotree)
   (setq projectile-switch-project-action 'neotree-projectile-action)
   :bind (("C-c ." . helm-projectile)
+	 ("C-." . helm-projectile)
 	 ("C-c p p" . projectile-switch-project)
 	 ("C-c p f" . helm-projectile-find-file-dwim)
 	 ("C-c p F" . helm-projectile-find-file-in-known-projects)

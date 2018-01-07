@@ -9,6 +9,7 @@
   ;;(add-to-list 'package-archives (cons "melpa-stable" (concat proto "://stable.melpa.org/packages/")) t)
 )
 
+(setq package-enable-at-startup nil)
 (package-initialize)
 
 ;; ## Bootstrap use-package
