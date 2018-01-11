@@ -10,4 +10,9 @@
   :init
   (add-to-list 'auto-mode-alist '("\\.markdown?\\'" . markdown-mode)))
 
+(use-package fsharp-mode
+  :mode ("\\.fsx?\\'")
+  :init
+  (add-to-list 'auto-mode-alist '("\\.fsx?\\'" . fsharp-mode)))
+
 (provide 'lf-lang-misc)
