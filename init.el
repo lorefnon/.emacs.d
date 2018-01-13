@@ -2,7 +2,8 @@
 
 (add-to-list 'load-path (expand-file-name "config" user-emacs-directory))
 (setq custom-file "~/.emacs.d/customizations.el")
-(load custom-file)
+(if (file-exists-p custom-file)
+    (load custom-file))
 
 (require 'lf-ui-primary)
 (require 'lf-package-setup)
