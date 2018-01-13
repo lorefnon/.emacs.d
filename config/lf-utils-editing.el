@@ -8,6 +8,10 @@
   :config
   (move-text-default-bindings))
 
+(use-package disable-mouse
+  :bind (("C-c m m" . global-disable-mouse-mode))
+  )
+
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
 (defun lf-revert-buffer-no-confirm ()
@@ -34,8 +38,6 @@
 	       (file-exists-p new-location)
 	       (not (string-equal old-location new-location)))
       (delete-file old-location))))
-
-;; Credits: Xah Lee
 
 (defun xah-copy-file-path (&optional φdir-path-only-p)
   "Copy the current buffer's file path or dired path to `kill-ring'.
