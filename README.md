@@ -8,6 +8,8 @@ Uses lazy loading (through use-package) to keep startup time to as low as possib
 
 It is pre-configured for web & frontend development (HTML, CSS, JS, TS, SCSS etc.)
 
+This setup is in regular use in Windows and Linux environments.
+
 Use it at your own risk. Feedback and Contributions are welcome.
 
 # Installation
