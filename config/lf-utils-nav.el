@@ -1,13 +1,23 @@
 (require 'lf-package-setup)
 
 (use-package avy
-  :bind (("C-c j" . avy-goto-char)
-	 ("C-c J" . avy-goto-line)))
+  :bind
+  (("C-c j" . avy-goto-char)
+   ("C-c J" . avy-goto-line)))
 
 (use-package switch-window
-  :bind (("C-x w w" . switch-window)
-	 ("C-x w W" . switch-window-then-maximize))
-  )
+  :bind
+  (("C-c w w" . switch-window)
+   ("C-c w W" . switch-window-then-maximize)))
+
+(use-package ag
+  :bind
+  (("C-c S" . ag)
+   ("C-c p s" . ag-project)))
+
+(use-package ranger
+  :bind
+  ("C-c R" . ranger))
 
 (use-package god-mode
   :bind (("C-c m g" . god-mode)))
