@@ -19,6 +19,11 @@
 ;; Treat clipboard input as UTF-8 string first; compound text next, etc.
 (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING))
 
+(add-hook 'find-file-hook 'linum-mode)
+(add-hook 'find-file-hook 'hl-line-mode)
+
+(setq visible-bell 1)
+
 (use-package undo-tree
   :config
   (global-undo-tree-mode))
@@ -45,6 +50,13 @@
 (defun lf-revert-buffer-no-confirm ()
   "Revert buffer without confirmation."
   (interactive) (revert-buffer t t))
+
+(global-set-key (kbd "C-c i s") (lambda () (interactive) (insert "Ψ")))
+
+(use-package goto-chg
+  :bind
+  (("C-c <" . goto-last-change)
+   ("C-c >" . goto-last-change-reverse)))
 
 (defun lf-move-file (new-location)
   "Write this file to NEW-LOCATION, and delete the old one."

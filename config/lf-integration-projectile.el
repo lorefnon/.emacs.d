@@ -17,8 +17,8 @@
       "Open dired and neotree when switching projects"
       (interactive)
       (let ((root (projectile-project-root)))
-	(neotree-dir root)
-	(dired root)))
+        (neotree-dir root)
+        (dired root)))
 
   (setq projectile-switch-project-action 'lf-projectile-action)
 
@@ -30,7 +30,6 @@
    ("C-c p f" . helm-projectile-find-file-dwim)
    ("C-c p F" . helm-projectile-find-file-in-known-projects)
    ("C-c p r" . helm-projectile-recentf)
-   ("C-c p a" . helm-projectile-ag)
    ("C-c p g" . helm-projectile-grep)
    ("C-c p b" . helm-projectile-switch-to-buffer))
 
