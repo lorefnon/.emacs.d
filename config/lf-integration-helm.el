@@ -29,7 +29,14 @@
    ("C-c R" . helm-recentf)
    ("C-x c Y" . helm-yas-create-snippet-on-region)
    ("C-x c b" . my/helm-do-grep-book-notes)
-   ("C-x c SPC" . helm-all-mark-rings)))
+   ("C-x c SPC" . helm-all-mark-rings))
+  :config
+  (defun helm-insert-char ()
+    (interactive)
+    (helm :sources
+          `((name . "Unicode char name")
+            (candidates . ,(ucs-names))
+            (action . insert)))))
 
 (use-package helm-swoop
   :defer t)
