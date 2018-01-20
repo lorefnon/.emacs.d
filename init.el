@@ -1,6 +1,7 @@
 ; (package-initialize)
 
 (add-to-list 'load-path (expand-file-name "config" user-emacs-directory))
+
 (setq custom-file "~/.emacs.d/customizations.el")
 (if (file-exists-p custom-file)
     (load custom-file))
@@ -8,6 +9,7 @@
 (require 'lf-ui-primary)
 (require 'lf-package-setup)
 (require 'lf-ui-theme)
+(require 'lf-integration-ag)
 (require 'lf-integration-helm)
 (require 'lf-integration-magit)
 (require 'lf-integration-neotree)
@@ -19,4 +21,6 @@
 (require 'lf-integration-elfeed)
 (require 'lf-utils-nav)
 (require 'lf-lang-ts)
+(require 'lf-lang-js)
 (require 'lf-lang-misc)
+(require 'lf-activate-ide)
