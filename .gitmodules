@@ -1,0 +1,3 @@
+[submodule "vendor-repos/js-align"]
+	path = vendor-repos/js-align
+	url = https://github.com/johnhooks/js-align.git
