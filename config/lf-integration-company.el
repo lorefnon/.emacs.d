@@ -12,8 +12,7 @@
        `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 5)))))
        `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
        `(company-tooltip-common ((t (:inherit font-lock-constant-face))))))
-    (setq company-idle-delay nil)
-    ))
+    (setq company-idle-delay nil)))
 
 (use-package helm-company
   :after (helm company)

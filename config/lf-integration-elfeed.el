@@ -2,7 +2,7 @@
 
 (use-package elfeed
   :bind
-  (("C-c f" . elfeed))
+  (("C-c F" . elfeed))
   :config
   (require 'elfeed)
   (require 'elfeed-goodies)

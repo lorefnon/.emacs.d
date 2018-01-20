@@ -8,6 +8,7 @@
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
+
 ;; backwards compatibility as default-buffer-file-coding-system
 ;; is deprecated in 23.2.
 (if (boundp 'buffer-file-coding-system)
@@ -51,7 +52,6 @@
   :bind
   (("C-c <" . goto-last-change)
    ("C-c >" . goto-last-change-reverse)))
-
 
 (defun lf-unindent-dwim (&optional count-arg)
   "Keeps relative spacing in the region.  Unindents to the next multiple of the current tab-width"

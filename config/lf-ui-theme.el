@@ -5,7 +5,6 @@
   :load-path "themes"
   :init
   (load-theme 'spacemacs-dark t)
-  :no-require t
-  )
+  :no-require t)
 
 (provide 'lf-ui-theme)
