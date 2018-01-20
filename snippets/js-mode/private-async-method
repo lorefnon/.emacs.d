@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: private-async-method
+# key: m:pvt:a
+# --
+private async $1($3) {$4
+}

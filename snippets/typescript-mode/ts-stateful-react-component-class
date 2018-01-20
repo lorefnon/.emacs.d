@@ -1,0 +1,23 @@
+# -*- mode: snippet -*-
+# name: ts-stateful-react-component-class
+# key: r:sC, classrc
+# --
+import * as React from "react";
+
+interface ${1:`(f-base (buffer-file-name))`}Props {$2
+}
+
+interface $1State {$3
+}
+
+class $1 extends React.Component<$1Props,$1State> {
+
+    state = {$4
+    }
+
+    render() {
+        return (
+            $5
+        );
+    }
+}

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: private-method
+# key: m:pvt
+# --
+private $4$1($3) {
+  $5
+}

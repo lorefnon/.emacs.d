@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: styled-react-component
+# key: r:sc
+# --
+
+export const Ψ$1 = styled($2, {$3});

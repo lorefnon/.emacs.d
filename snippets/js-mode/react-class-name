@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: react-class-name
+# key: cn=
+# --
+className=${1:"$2"}
