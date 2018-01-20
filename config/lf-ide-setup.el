@@ -4,7 +4,9 @@
   "Activate features useful when editing projects"
   (interactive)
   (projectile-global-mode t)
-  (global-flycheck-mode t))
+  (global-flycheck-mode t)
+  (yas-global-mode t)
+  (global-company-mode t))
 
 (global-set-key (kbd "C-c ! ! !") 'lf-activate-ide)
 
