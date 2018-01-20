@@ -1,10 +1,5 @@
 (require 'lf-package-setup)
 
-(use-package js-align
-  :mode ("\\.js?\\'")
-  :config
-  (add-hook 'js-mode 'js-align-mode))
-
 (use-package rjsx-mode
   :mode ("\\.jsx?\\'")
   :config

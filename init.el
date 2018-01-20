@@ -1,6 +1,7 @@
 ; (package-initialize)
 
 (add-to-list 'load-path (expand-file-name "config" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "vendor-repos/js-align" user-emacs-directory))
 
 (setq custom-file "~/.emacs.d/customizations.el")
 (if (file-exists-p custom-file)
@@ -17,10 +18,12 @@
 (require 'lf-integration-eshell)
 (require 'lf-integration-company)
 (require 'lf-integration-flycheck)
+(require 'lf-integration-yas)
 (require 'lf-utils-editing)
 (require 'lf-integration-elfeed)
 (require 'lf-utils-nav)
+(require 'lf-utils-fs)
 (require 'lf-lang-ts)
 (require 'lf-lang-js)
 (require 'lf-lang-misc)
-(require 'lf-activate-ide)
+(require 'lf-ide-setup)
