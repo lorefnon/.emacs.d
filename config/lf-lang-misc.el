@@ -15,4 +15,9 @@
   :init
   (add-to-list 'auto-mode-alist '("\\.fsx?\\'" . fsharp-mode)))
 
+(use-package php-mode
+  :mode ("\\.php\\'")
+  :init
+  (add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode)))
+
 (provide 'lf-lang-misc)

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: react-this-props
+# key: tp.
+# --
+this.props.

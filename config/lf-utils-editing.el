@@ -8,6 +8,8 @@
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
+;; https://emacs.stackexchange.com/questions/33510/unicode-txt-slowness/33514
+(setq inhibit-compacting-font-caches t)
 
 ;; backwards compatibility as default-buffer-file-coding-system
 ;; is deprecated in 23.2.

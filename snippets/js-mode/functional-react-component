@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
 # name: functional-react-component
-# key: r:c, r=>
+# key: r:c
 # --
 export const $1 = ({$2}) => ()

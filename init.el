@@ -27,3 +27,5 @@
 (require 'lf-lang-js)
 (require 'lf-lang-misc)
 (require 'lf-ide-setup)
+
+(require 'lf-css-to-js)

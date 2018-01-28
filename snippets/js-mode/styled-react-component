@@ -1,6 +1,8 @@
 # -*- mode: snippet -*-
 # name: styled-react-component
-# key: r:sc
+# key: r:c:s
 # --
 
-export const Ψ$1 = styled($2, {$3});
+export const Ψ$1 = styled(${2:"${3:div}"}, {$4});
+
+Ψ$1.displayName = "Ψ$1";

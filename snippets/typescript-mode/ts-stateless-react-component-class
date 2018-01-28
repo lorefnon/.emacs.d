@@ -1,13 +1,13 @@
 # -*- mode: snippet -*-
 # name: ts-stateless-react-component-class
-# key: r:C
+# key: r:C:t
 # --
 import * as React from "react";
 
-interface ${1:`(f-base (buffer-file-name))`}Props {$2
+export interface ${1:`(f-base (buffer-file-name))`}Props {$2
 }
 
-class $1 extends React.Component<$1Props> {
+export class $1 extends React.Component<$1Props> {
     render() {
         return (
             $3

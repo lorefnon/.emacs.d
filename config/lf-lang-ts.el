@@ -18,6 +18,7 @@
 (defun setup-tide-mode ()
   (require 'tide)
   (require 'company)
+  (require 'helm)
   (require 'helm-company)
   (interactive)
   (tide-setup)
@@ -29,7 +30,14 @@
   ;; install it separately via package-install
   ;; `M-x package-install [ret] company`
   (company-mode +1)
-  (add-hook 'before-save-hook 'tide-format-before-save))
+  (setq tide-always-show-documentation t)
+  (add-hook 'before-save-hook 'tide-format-before-save)
+  (defun tide-popup-select-item (prompt list)
+    (helm
+     :sources
+     (helm-build-sync-source prompt
+       :candidates list)
+     :buffer "*Tide Completion Candidates*")))
 
 (add-hook 'typescript-mode-hook #'setup-tide-mode)
 

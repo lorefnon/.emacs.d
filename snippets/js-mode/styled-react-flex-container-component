@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: styled-flex-container-component
+# key: r:c:s:f
+# --
+
+${1:// Flexbox container:
+//
+// Refer: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+//}
+export const Ψ$2 = styled(${3:"${4:div}"}, {
+    display: "flex",
+    flexDirection: "${5:row}",
+    flexWrap: "${6:nowrap}",
+    alignItems: "${10:stretch}",
+    alignContent: "${11:flex-start}",$12
+});

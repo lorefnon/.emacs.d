@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: mst-witness
+# key: mst:witness
+# --
+type SchemaWitness = ExtendsWitness<typeof ${1:schema}, ISchema<${2:I$3Schema}>>;
