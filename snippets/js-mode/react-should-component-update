@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: react-should-component-update
+# key: rscu
+# --
+shouldComponentUpdate() {$1}

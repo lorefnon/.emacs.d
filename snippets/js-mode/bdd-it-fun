@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: bdd-it-arrow
+# key: itfun
+# --
+it("$1", function() {
+  $2
+});

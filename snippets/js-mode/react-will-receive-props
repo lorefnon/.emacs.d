@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: react-will-receive-props
+# key: rwrp
+# --
+componentWillReceiveProps(nextProps, nextState) {$1}

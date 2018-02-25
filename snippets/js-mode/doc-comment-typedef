@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: doc-comment-typedef
+# key: @t
+# --
+/**
+ * @typedef {$1:{Object}} $2
+ * $3
+ */

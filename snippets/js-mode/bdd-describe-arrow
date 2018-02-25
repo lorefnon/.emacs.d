@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: bdd-describe-arrow
+# key: desc=>
+# --
+describe("$1", () => {
+  $2
+});

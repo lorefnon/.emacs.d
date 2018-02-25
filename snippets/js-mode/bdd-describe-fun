@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: bdd-describe-fun
+# key: descfun
+# --
+describe("$1", function() {
+  $2
+});

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: react-component-did-catch
+# key: rcdc
+# --
+componentDidCatch() {$1}

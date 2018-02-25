@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: const
+# key: const
+# --
+${1:export }const $2 = ${3:{$4}};

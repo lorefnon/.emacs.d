@@ -1,0 +1,57 @@
+# -*- mode: snippet -*-
+# name: react-class-component
+# key: rC
+# --
+${1:import React, {Component} from 'react';
+}${2:import T from 'prop-types';
+}${3:import {connect} from 'react-redux';
+
+@connect(
+    ${4:function mapStateToProps(state, ownProps) {
+        return ${5:{$6}};
+    }},
+    ${7:function mapDispatchToProps(dispatch, ownProps) {
+        return ${8:{$9}};
+    }}
+)
+}${10:export }${11:default }class $17 extends ${22:Component} {
+${27:
+    static propTypes = {$32};
+}${37:
+    static defaultProps = {$42}
+}${47:
+    state = {$52};
+}${57:
+    constructor(...args) {
+        super(...args);
+        $62
+    }
+}${65:${75:
+    componentWillMount() {
+        $80
+    }
+}${85:
+    componentWillReceiveProps(nextProps) {
+        $90
+    }
+}${95:
+    shouldComponentUpdate() {
+        $100
+    }
+}${105:
+    componentWillUpdate(nextProps, nextState) {
+        $110
+    }
+}${115:
+    componentDidUpdate(prevProps, prevState) {
+        $120
+    }
+}${125:
+    componentWillUnmount() {
+        $130
+    }
+}${135:
+    componentDidCatch() {
+        $140
+    }
+}}}

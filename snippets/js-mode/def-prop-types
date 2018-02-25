@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: react-def-prop-types
+# key: rpt=
+# --
+static propTypes = ${1};

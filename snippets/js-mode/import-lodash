@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: import-lodash
+# key: im_
+# --
+import ${1:_} from 'lodash';

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: constructor
+# key: cons
+# --
+constructor(${1:...args}) {${2:
+    super(${3:$1});}$3
+}

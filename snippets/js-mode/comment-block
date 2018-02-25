@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: react-this-props
+# key: **
+# --
+/**
+ * $1
+ */

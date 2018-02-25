@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: doc-comment-property
+# key: @P
+# --
+@property {$1} $2 $3

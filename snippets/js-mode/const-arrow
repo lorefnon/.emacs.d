@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: const-arrow
+# key: const=>
+# --
+${1:export }const $2 = ($3) => ${4:{$5}};

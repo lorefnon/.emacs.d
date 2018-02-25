@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: react-set-state
+# key: tss.
+# --
+this.setState(${1:{$2}});

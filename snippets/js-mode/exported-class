@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: exported-class
-# key: ex:class
+# key: exclass
 # --
-export class $1 {$2
+export ${2:default }class $1 {$3
 }

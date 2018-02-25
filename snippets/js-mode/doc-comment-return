@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: doc-comment-return
+# key: @return
+# --
+@return {$1} $2

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: import-core-decorators
+# key: imcd
+# --
+import {$1} from 'core-decorators';
