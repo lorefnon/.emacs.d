@@ -7,8 +7,11 @@
    ("C-c n f" . neotree-find)
    ("C-c n ." . neotree-projectile-action)
    (:map neotree-mode-map
-	 ("M-<RET>" . lf-neotree-enter-in-switched-window)
-	 ("C-c M-w" . lf-neotree-copy-relative-path)))
+         ("M-<RET>" . lf-neotree-enter-in-switched-window)
+         ("C-c M-w" . lf-neotree-copy-relative-path)))
+  :init
+
+  (setq neo-theme 'arrow)
 
   :config
 

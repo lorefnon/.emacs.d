@@ -49,6 +49,7 @@
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
 (global-set-key (kbd "C-c i s") (lambda () (interactive) (insert "Ψ")))
+(global-set-key (kbd "C-c i e") (lambda () (interactive) (insert "ε")))
 
 (use-package goto-chg
   :bind
@@ -79,6 +80,39 @@
         (indent-rigidly beg end (or
                                  (and (< indent-amount 0) indent-amount)
                                  (* (or count 1) (- 0 tab-width))))))))
+
+(defun lf-disable-indentation ()
+  (interactive)
+  (setq electric-indent-inhibit t)
+  (setq tab-width 4)
+  (local-set-key (kbd "<tab>") (lambda () (interactive) (lf-unindent-dwim -1)))
+  (local-set-key (kbd "<backtab>") 'lf-unindent-dwim))
+
+;; Disable emacs indentation for models where it is badly supported
+;; ===
+;; (dolist (hook '(rjsx-mode-hook
+;;         js-mode-hook
+;;         js2-mode-hook
+;;         jsx-mode-hook))
+;; (add-hook hook 'lf-disable-indentation))
+
+(electric-indent-mode -1)
+
+(custom-set-variables
+ '(js2-basic-offset 4)
+ '(js2-bounce-indent-p t)
+ )
+
+;; Disable auto-backup files because I already have a version control
+(setq make-backup-files nil) ; stop creating backup~ files
+(setq auto-save-default nil) ; stop creating #autosave# files
+
+(setq-default truncate-lines t)
+(setq-default global-visual-line-mode t)
+(setq web-mode-enable-auto-quoting nil)
+
+;; There doesn't an operation so important that I need to type out three letters for confirmation
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 (global-set-key (kbd "C-c [") 'lf-unindent-dwim)
 (global-set-key (kbd "C-c ]") (lambda () (interactive) (lf-unindent-dwim -1)))

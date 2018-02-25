@@ -15,10 +15,6 @@
   (("C-c S" . ag)
    ("C-c p s" . ag-project)))
 
-(use-package ranger
-  :bind
-  ("C-c R" . ranger))
-
 (use-package god-mode
   :bind (("C-c m g" . god-mode)))
 
@@ -27,10 +23,13 @@
 position between `back-to-indentation' and `beginning-of-line'."
   (interactive "^")
   (if (and (eq last-command 'lf-utils-editing-start-line-start)
-	   (= (line-beginning-position) (point)))
+           (= (line-beginning-position) (point)))
       (back-to-indentation)
     (beginning-of-line)))
 
 (global-set-key (kbd "C-a") 'lf-utils-editing-start-line-start)
+
+(recentf-mode 1)
+(setq recentf-max-menu-items 25)
 
 (provide 'lf-utils-nav)

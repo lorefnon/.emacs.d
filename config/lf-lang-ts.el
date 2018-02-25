@@ -9,8 +9,9 @@
   :defer t
   :bind
   ("C-c t E" . tide-project-errors)
-  ("C-c t f" . tide-fix)
-  ("C-c t F" . tide-format)
+  ("C-c t f ." . tide-fix)
+  ("C-c t f n" . tide-fix-next-error)
+  ("C-c t f p" . tide-fix-prev-error)
   ("C-c t ." . tide-jump-to-definition)
   ("C-c t i" . tide-jump-to-implementation)
   ("C-c t <" . tide-jump-back))
@@ -30,14 +31,28 @@
   ;; install it separately via package-install
   ;; `M-x package-install [ret] company`
   (company-mode +1)
+
   (setq tide-always-show-documentation t)
   (add-hook 'before-save-hook 'tide-format-before-save)
+
   (defun tide-popup-select-item (prompt list)
     (helm
      :sources
      (helm-build-sync-source prompt
        :candidates list)
-     :buffer "*Tide Completion Candidates*")))
+     :buffer "*Tide Completion Candidates*"))
+
+  (defun tide-fix-next-error ()
+    "Move to and fix next error"
+    (interactive)
+    (flycheck-next-error)
+    (tide-fix))
+
+  (defun tide-fix-prev-error ()
+    "Move to and fix previous error"
+    (interactive)
+    (flycheck-previous-error)
+    (tide-fix)))
 
 (add-hook 'typescript-mode-hook #'setup-tide-mode)
 

@@ -26,7 +26,7 @@
    ("C-c o" . helm-occur)
    ("C-c s" . helm-swoop)
    ("C-c y" . helm-yas-complete)
-   ("C-c R" . helm-recentf)
+   ("C-c f R" . helm-recentf)
    ("C-x c Y" . helm-yas-create-snippet-on-region)
    ("C-x c b" . my/helm-do-grep-book-notes)
    ("C-x c SPC" . helm-all-mark-rings))
