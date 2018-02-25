@@ -1,14 +1,14 @@
 ; (package-initialize)
 
 (add-to-list 'load-path (expand-file-name "config" user-emacs-directory))
-(add-to-list 'load-path (expand-file-name "vendor-repos/js-align" user-emacs-directory))
+
+(require 'lf-ui-primary)
+(require 'lf-package-setup)
 
 (setq custom-file "~/.emacs.d/customizations.el")
 (if (file-exists-p custom-file)
     (load custom-file))
 
-(require 'lf-ui-primary)
-(require 'lf-package-setup)
 (require 'lf-ui-theme)
 (require 'lf-integration-ag)
 (require 'lf-integration-helm)
