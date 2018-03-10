@@ -4,7 +4,6 @@
   :bind
   (("C-c m f" . global-flycheck-mode))
   :config
-  (require 'flycheck)
   (require 'helm-flycheck))
 
 (use-package helm-flycheck

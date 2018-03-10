@@ -20,4 +20,9 @@
   :init
   (add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode)))
 
+(use-package protobuf-mode
+  :mode ("\\.proto\\'")
+  :init
+  (add-to-list 'auto-mode-alist '("\\.proto\\'" . protobuf-mode)))
+
 (provide 'lf-lang-misc)
