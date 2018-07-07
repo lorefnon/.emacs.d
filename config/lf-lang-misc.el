@@ -25,4 +25,11 @@
   :init
   (add-to-list 'auto-mode-alist '("\\.proto\\'" . protobuf-mode)))
 
+(use-package alchemist)
+
+(use-package slim-mode
+  :mode ("\\.slime?\\'")
+  :init
+  (add-to-list 'auto-mode-alist '("\\.slime?\\'" . slim-mode)))
+
 (provide 'lf-lang-misc)

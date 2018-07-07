@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: ts-stateful-react-component-class
-# key: r:C:s:t
+# key: ts-r-C
 # --
 import * as React from "react";
 

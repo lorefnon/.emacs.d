@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: ts-react-functional-component
+# key: ts-r-c
+# --
+import * as React from "react";
+
+export interface ${10:`(f-base (buffer-file-name))`}Props {$20
+}
+
+export const $10 = (props: $10Props) => ${30:($40)};

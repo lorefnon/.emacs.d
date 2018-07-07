@@ -1,10 +1,10 @@
 # -*- mode: snippet -*-
 # name: mst-model
-# key: mst:model
+# key: mst-m
 # --
 import { types as t } from "mobx-state-tree";
 
-export const $1 = t
+export const ${1:`(f-base (buffer-file-name))`} = t
     .model("$1", ${6:{$11}})${16:
     .views(self => ({$21}))}${26:
     .actions(self => ({$31}))}${36:
@@ -12,5 +12,8 @@ export const $1 = t
         $41return {$46};
     })}
 
-export type I$1 = typeof $1.Type;
-export type I$1Snapshot = typeof $1.SnapshotType;
+type T = typeof $1.Type;
+type S = typeof $1.SnapshotType;
+
+export interface I$1 extends T {};
+export interface I$1Snapshot extends S {};

@@ -3,8 +3,8 @@
 ;; # Setup Primary Theme
 (use-package spacemacs-theme
   :load-path "themes"
-  :init
-  (load-theme 'spacemacs-dark t)
+  :config
+  (load-theme 'spacemacs-dark-theme t)
   :no-require t)
 
 (provide 'lf-ui-theme)

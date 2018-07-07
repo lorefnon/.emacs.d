@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: import-types-from-mobx
-# key: importtmobx
-# --
-import {types as t$1} from "mobx-state-tree";

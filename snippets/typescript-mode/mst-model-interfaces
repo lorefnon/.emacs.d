@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: mst-model-interfaces
+# key: mst-mi
+# --
+type T = typeof ${1:`(f-base (buffer-file-name))`}.Type;
+type S = typeof $1.SnapshotType;
+
+export interface I$1 extends T {};
+export interface I$1Snapshot extends S {};

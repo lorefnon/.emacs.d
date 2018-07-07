@@ -33,7 +33,8 @@
   (company-mode +1)
 
   (setq tide-always-show-documentation t)
-  (add-hook 'before-save-hook 'tide-format-before-save)
+  (setq tide-sync-request-timeout 120)
+  ;; (add-hook 'before-save-hook 'tide-format-before-save)
 
   (defun tide-popup-select-item (prompt list)
     (helm

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: mst-model-types
+# key: mst-mt
+# --
+type I${1:`(f-base (buffer-file-name))`} = typeof $1.Type;
+type I$1Snapshot = typeof $1.SnapshotType;
