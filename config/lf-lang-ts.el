@@ -57,4 +57,18 @@
 
 (add-hook 'typescript-mode-hook #'setup-tide-mode)
 
+(use-package prettier-js
+  :config
+  (add-hook 'js2-jsx-hook 'prettier-js-mode)
+  (add-hook 'js2-mode-hook 'prettier-js-mode)
+  (add-hook 'web-mode-hook 'prettier-js-mode)
+  (add-hook 'typescript-mode-hook 'prettier-js-mode))
+
+(use-package add-node-modules-path
+  :config
+  (eval-after-load 'typescript-mode
+    '(progn
+       (add-hook 'typescript-mode-hook #'add-node-modules-path)
+       (add-hook 'typescript-mode-hook #'prettier-js-mode))))
+
 (provide 'lf-lang-ts)

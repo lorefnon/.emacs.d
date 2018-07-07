@@ -4,9 +4,9 @@
   :bind
   (("C-c m f" . global-flycheck-mode))
   :config
-  (require 'helm-flycheck))
+  (global-flycheck-mode t))
 
 (use-package helm-flycheck
-  :defer t)
+  :after (helm flycheck))
 
 (provide 'lf-integration-flycheck)

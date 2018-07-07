@@ -1,0 +1,2 @@
+(#s(treemacs-workspace "Default Workspace"
+                       (#s(treemacs-project ".emacs.d" "/home/lorefnon/.emacs.d"))))

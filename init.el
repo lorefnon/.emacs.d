@@ -2,6 +2,7 @@
 
 (add-to-list 'load-path (expand-file-name "config" user-emacs-directory))
 
+(require 'lf-config-gc)
 (require 'lf-ui-primary)
 (require 'lf-package-setup)
 
@@ -26,6 +27,5 @@
 (require 'lf-lang-ts)
 (require 'lf-lang-js)
 (require 'lf-lang-misc)
-(require 'lf-ide-setup)
 
 (require 'lf-css-to-js)
