@@ -1,6 +1,7 @@
 ; (package-initialize)
 
 (add-to-list 'load-path (expand-file-name "config" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "vendor" user-emacs-directory))
 
 (require 'lf-config-gc)
 (require 'lf-ui-primary)
@@ -29,3 +30,4 @@
 (require 'lf-lang-misc)
 
 (require 'lf-css-to-js)
+(put 'narrow-to-region 'disabled nil)
