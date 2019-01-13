@@ -31,6 +31,12 @@
    ("C-x c b" . my/helm-do-grep-book-notes)
    ("C-x c SPC" . helm-all-mark-rings))
   :config
+  (set-face-attribute 'helm-source-header nil :height 0.1)
+  ;; https://www.reddit.com/r/emacs/comments/2z7nbv/lean_helm_window/
+  (helm-autoresize-mode 1)
+  (setq helm-autoresize-max-height 30)
+  (setq helm-autoresize-min-height 30)
+  (setq helm-split-window-in-side-p t)
   (defun helm-insert-char ()
     (interactive)
     (helm :sources
