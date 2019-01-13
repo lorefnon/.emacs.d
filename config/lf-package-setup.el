@@ -25,20 +25,20 @@
     (eval-buffer)))
 
 ;; ## Bootstrap quelpa-use-package
-(quelpa
- '(quelpa-use-package
-   :fetcher github
-   :repo "quelpa/quelpa-use-package"))
+;; (quelpa
+;;  '(quelpa-use-package
+;;   :fetcher github
+;;   :repo "quelpa/quelpa-use-package"))
 
-(require 'quelpa-use-package)
+;; (require 'quelpa-use-package)
 
 ;; ## Bootstrap use-package
 ;;
 ;; Rest of the packages will auto-installed by use-package
 ;; but use-package itself needs to be bootstrapped
 ;;
-;; (unless (package-installed-p 'use-package)
-;;   (package-install 'use-package))
+(unless (package-installed-p 'use-package)
+   (package-install 'use-package))
 
 (eval-when-compile
   (require 'use-package))
