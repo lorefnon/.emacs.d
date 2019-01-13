@@ -1,4 +1,6 @@
 (require 'lf-package-setup)
+(require 'multi-region)
+(require 'highlight)
 
 ;; Enforce UTF-8 as the default coding system for all files, comint processes and buffers.
 ;;
@@ -34,9 +36,16 @@
   :config
   (global-undo-tree-mode))
 
+(use-package expand-region
+  :config
+  (global-set-key (kbd "C-=") 'er/expand-region))
+
 (use-package move-text
   :config
   (move-text-default-bindings))
+
+;; (use-package zones
+;;   :quelpa (zones :fetcher url :url "https://www.emacswiki.org/emacs/download/zones.el"))
 
 (use-package s)
 (use-package f)
@@ -123,5 +132,10 @@
 (global-set-key (kbd "C-c \\") 'uncomment-region)
 (global-set-key (kbd "C-c \\") 'uncomment-region)
 (global-set-key (kbd "C-<return>") 'cua-rectangle-mark-mode)
+
+(global-set-key (kbd "C-c +") 'multi-region-mark-region)
+(global-set-key (kbd "C-c -") 'multi-region-unmark-region)
+(global-set-key (kbd "C-c =") 'multi-region-unmark-regions)
+(global-set-key (kbd "C-c *") 'multi-region-execute-command)
 
 (provide 'lf-utils-editing)
